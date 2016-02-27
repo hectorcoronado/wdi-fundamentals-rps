@@ -21,18 +21,28 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-function getPlayerMove(move) {
+var getPlayerMove = function(move) {
     // Write an expression that operates on a variable called `move`
+    if (move == ('rock' || 'paper' || 'scissors')) {
+         return move;
+    }
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+    else if (move == (undefined || null)) {
+        getInput();
+    }
 }
 
-function getComputerMove(move) {
+var getComputerMove = function(move) {
     // Write an expression that operates on a variable called `move`
+    if (move !== null) {
     // If a `move` has a value, your expression should evaluate to that value.
+        return move;
+    }
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    else if (move == (undefined || null)) {
+        randomPlay();
+    }
 }
 
 function getWinner(playerMove,computerMove) {
